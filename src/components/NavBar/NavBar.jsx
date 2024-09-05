@@ -11,15 +11,19 @@ function NavBar() {
                 </div>
                 <div className="flex grow justify-center items-center">
                     <input className="w-[60%] h-12 text-center rounded-lg border-2 font-quickSand" type="text" placeholder="¿Qué estas buscando?" />
-                    <FcSearch className="m-2" size="50px"/>
+                    <button><FcSearch className="m-2" size="50px"/></button>
+                    
                 </div>
-                <div className="flex  growitems-center justify-center">
-                    <ul className="flex justify-center items-center space-x-10">
+                <div className="flex items-center justify-around">
+                    <ul className="flex justify-around items-center space-x-10 font-bebas text-2xl ">
                         <li>
-                            <a className="font-bebas text-2xl hover:text-azulOrpack" href="#">Inicio</a>
+                            <a className="hover:text-azulOrpack" href="#">Inicio</a>
                         </li>
                         <li>
-                            <a className="font-bebas text-2xl hover:text-azulOrpack pr-6" href="#">Productos</a>
+                            <a className="hover:text-azulOrpack" href="#">Productos</a>
+                        </li>
+                        <li>
+                            <a className="hover:text-azulOrpack pr-6" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
