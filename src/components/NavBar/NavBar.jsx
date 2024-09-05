@@ -28,7 +28,7 @@ function NavBar() {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center mr-4">
-                    <CartWidget />
+                    <button><CartWidget/></button>
                 </div>
             </nav>
         </header>
