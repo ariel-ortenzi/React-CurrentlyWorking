@@ -13,6 +13,7 @@ export default {
       },
       colors: {
         azulOrpack: '#144681',
+        bgColor: '#E0E0E0',
       }
     },
   },
