@@ -2,16 +2,16 @@ import { useState, useEffect } from "react"
 import ItemList from "./ItemList";
 import getProducts from "../../data/getProducts"
 import { useParams } from "react-router-dom"
+import Loading from "../Loading/Loading";
 
 function ItemListContainer({ titles }) {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(false);
     const { idCategory } = useParams();
     const { idInput } = useParams();
 
-    console.log({idInput})
-    console.log({products})
-
     useEffect(() => {
+        setLoading(true);
         getProducts
             .then((response) => {
                 if (idCategory) {
@@ -31,13 +31,14 @@ function ItemListContainer({ titles }) {
                 }
             })
             .catch(error => console.error(error))
+            .finally(() => setLoading(false));
     }, [idCategory, idInput])
 
     return (
         <div>
             <h2 className="font-quickSand text-center m-5 text-2xl underline text-azulOrpack font-bold">{typeof idCategory === 'string' && idCategory.toUpperCase()}</h2>
             <h2 className="font-quickSand text-center m-5 text-2xl underline text-azulOrpack font-bold">{titles}</h2>
-            <ItemList products={products} searchInput={idInput} />
+            {loading ? <Loading/> : <ItemList products={products} searchInput={idInput} />}
         </div>
     )
 
