@@ -16,7 +16,7 @@ function NavBar() {
                     <SearchBar/>
                     <div className="flex items-center justify-around">
                         <ul className="flex justify-around items-center space-x-10 font-bebas text-2xl">
-                            <Link to={"/"} className="hover:text-azulOrpack">INICIO</Link>
+                            <Link to={"/"} className="hover:text-azulOrpack">TODOS</Link>
                             <Link to={"/category/cinta"} className="hover:text-azulOrpack">CINTAS</Link>
                             <Link to={"/category/filmadherente"} className="hover:text-azulOrpack">FILM ADHERENTE</Link>
                             <Link to={"/category/filmalimentos"} className="hover:text-azulOrpack">FILM ALIMENTOS</Link>

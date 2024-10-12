@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+import { IoHome } from "react-icons/io5";
+
 const ItemDetail = ({ product }) => {
     return (
-        <div className="relative flex justify-center items-center">
+        <div className="relative flex justify-center items-center font-quickSand">
             <div className="absolute left-32 max-w-lg max-h-full pt-20 pr-30">
                 <div className="w-full p-4 text-center items-center bg-white flex">
                     <div className="pr-6">
@@ -12,8 +15,13 @@ const ItemDetail = ({ product }) => {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center bg-white">
-                    <h3 className="text-lg text-gray-500 mt-2 pb-6">{`$ ${product.price} u.`}</h3>
-                    <button className="bg-[#144681] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#0d3460] hover:scale-105 hover:shadow-xl transform transition-all duration-300 ease-out mb-4">COMPRAR</button>
+                    <h3 className="text-xl text-gray-500 mt-1 pb-6">{`$ ${product.price} u.`}</h3>
+                    <div className="flex justify-center items-center space-x-4 m-4">
+                        <Link to={"/"}>
+                            <button className="bg-azulOrpack text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#123a6d] transition-all duration-300 transform hover:scale-105 shadow-lg"><IoHome size="25px" /></button>
+                        </Link>
+                        <button className="bg-azulOrpack text-white font-bold py-2 px-4 rounded-lg hover:bg-[#0d3460] hover:scale-105 hover:shadow-xl transform transition-all duration-300 ease-out">AGREGAR AL CARRITO</button>
+                    </div>
                 </div>
             </div>
         </div>
