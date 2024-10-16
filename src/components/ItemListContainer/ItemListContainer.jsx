@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import ItemList from "./ItemList";
 import getProducts from "../../data/getProducts"
 import { useParams } from "react-router-dom"
-import Loading from "../Loading/Loading";
+import Loading from "../loading/Loading";
 
 function ItemListContainer({ titles }) {
     const [products, setProducts] = useState([]);

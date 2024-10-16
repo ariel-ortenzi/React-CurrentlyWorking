@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import AddToCart from "../cart/AddToCart";
+import DecreaseItem from "../cart/DecreaseItem";
+import RemoveItems from "../cart/RemoveItems";
+import { FaCirclePlus } from "react-icons/fa6";
 
 const ItemDetail = ({ product }) => {
+
+    const [cart, setCart] = useContext(CartContext);
+
+    const getQuantityById = (id) => {
+        return cart.find((item) => item.id === id)?.quantity || 0;
+    };
+
+    const quantityPerItem = getQuantityById(product.id)
+
     return (
         <div className="relative flex justify-center items-center font-quickSand">
             <div className="absolute left-32 max-w-lg max-h-full pt-20 pr-30">
@@ -20,7 +35,26 @@ const ItemDetail = ({ product }) => {
                         <Link to={"/"}>
                             <button className="bg-azulOrpack text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#123a6d] transition-all duration-300 transform hover:scale-105 shadow-lg"><IoHome size="25px" /></button>
                         </Link>
-                        <button className="bg-azulOrpack text-white font-bold py-2 px-4 rounded-lg hover:bg-[#0d3460] hover:scale-105 hover:shadow-xl transform transition-all duration-300 ease-out">AGREGAR AL CARRITO</button>
+                        <div className="flex justify-center items-center">
+                        {
+                            quantityPerItem === 0 ? (
+                                <AddToCart product={product} />
+                            ) : (
+                                <>
+                                    <div>
+                                        <RemoveItems product={product} showDeleteButton={true} />
+                                    </div>
+                                    <div className="flex text-center items-center">
+                                        <DecreaseItem product={product} />
+                                        <div className="m-6 font-bebas text-xl font-blod">
+                                            {quantityPerItem}
+                                        </div>
+                                        <AddToCart product={product} icon={<FaCirclePlus size="40px" />} />
+                                    </div>
+                                </>
+                            )
+                        }
+                    </div>
                     </div>
                 </div>
             </div>

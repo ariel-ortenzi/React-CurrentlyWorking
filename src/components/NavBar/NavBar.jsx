@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
-import CartWidget from "../cartWidget/CartWidget";
+import CartWidget from "../cart/CartWidget";
 import logo from "../../assets/logotype/logoOrpack.png";
 import SearchBar from "../serchBar/SearchBar";
-// import { FcSearch } from "react-icons/fc";
 
 
 function NavBar() {
     return (
-        <header className="sticky top-0 bg-gray-500 border border-b-4 border-gray-500 border-b-blue-900 z-10">
+        <header className="sticky top-0 bg-gray-500 border border-b-4 border-gray-500 border-b-blue-900 z-50">
             <nav className="flex flex-grow-1 p-4">
-                <div className="content-center">
-                    <img className="size-40" src={logo} alt="Logo orpack" />
-                </div>
+                <Link to={"/"}>
+                    <div className="content-center">
+                        <img className="size-40" src={logo} alt="Logo orpack" />
+                    </div>
+                </Link>
                 <div className="flex grow flex-col justify-center items-center">
                     <SearchBar/>
                     <div className="flex items-center justify-around">
@@ -26,7 +27,9 @@ function NavBar() {
                     </div>
                 </div>
                 <div className="flex justify-end items-center mr-4">
-                    <CartWidget />
+                    <Link to={"/cart"}>
+                        <CartWidget />
+                    </Link>
                 </div>
             </nav>
         </header>
