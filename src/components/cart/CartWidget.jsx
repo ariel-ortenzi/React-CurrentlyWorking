@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FaCartArrowDown } from "react-icons/fa6";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../context/CartContext";
 
 function CartWidget() {
 

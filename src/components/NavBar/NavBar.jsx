@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import CartWidget from "../Cart/CartWidget.jsx";
+import CartWidget from "../cart/CartWidget.jsx";
 import logo from "../../assets/logotype/logoOrpack.png";
-import SearchBar from "../SerchBar/SearchBar.jsx";
+import SearchBar from "../serchBar/SearchBar.jsx";
 
 
 function NavBar() {

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import ItemList from "./ItemList.jsx";
 import { useParams } from "react-router-dom"
-import Loading from "../Loading/Loading.jsx";
-import GetProducts from "../../Data/GetProducts.jsx";
+import Loading from "../loading/Loading.jsx";
+import GetProducts from "../../data/GetProducts.jsx";
 
 
 function ItemListContainer({ titles }) {
