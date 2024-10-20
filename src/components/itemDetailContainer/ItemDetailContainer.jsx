@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import getProducts from "../../data/getProducts";
+// import getProducts from "../../data/getProducts";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loading from "../loading/Loading";
+import GetProducts from "../../data/GetProducts";
 
 
 const ItemDetailContainer = () => {
@@ -12,7 +13,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        getProducts
+        GetProducts()
             .then((response) => {
                 const newProduct = response.find((product) => product.id === Number(idProduct))
                 setProduct(newProduct)

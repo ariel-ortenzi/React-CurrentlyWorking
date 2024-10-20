@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react"
 import ItemList from "./ItemList";
-import getProducts from "../../data/getProducts"
 import { useParams } from "react-router-dom"
 import Loading from "../loading/Loading";
+import GetProducts from "../../data/GetProducts";
+
 
 function ItemListContainer({ titles }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const { idCategory } = useParams();
-    const { idInput } = useParams();
+    const { idCategory, idInput } = useParams();
 
     useEffect(() => {
         setLoading(true);
-        getProducts
+        GetProducts()
             .then((response) => {
                 if (idCategory) {
                     const newProducts = response.filter((product) =>

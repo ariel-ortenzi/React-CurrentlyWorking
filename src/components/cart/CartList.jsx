@@ -26,8 +26,8 @@ function CartList() {
                     ) : (
                         cart.map((product) => {
                             return (
-                                <div className="w-full">
-                                    <CartItem key={product.id} product={product} />
+                                <div key={product.id} className="w-full">
+                                    <CartItem product={product} />
                                 </div>
                             );
                         })
