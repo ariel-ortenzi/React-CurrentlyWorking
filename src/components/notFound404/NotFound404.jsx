@@ -6,4 +6,4 @@ const NotFound404 = () => (
     </div>
 )
 
-export default NotFound404
+export default NotFound404;
