@@ -3,6 +3,7 @@ import CartWidget from "../cart/CartWidget.jsx";
 import logo from "../../assets/logotype/logoOrpack.png";
 import SearchBar from "../serchBar/SearchBar.jsx";
 
+//sdfasdfasdfsda
 
 function NavBar() {
     return (

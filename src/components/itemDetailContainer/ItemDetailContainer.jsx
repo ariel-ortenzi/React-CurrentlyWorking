@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../loading/Loading.jsx";
 import GetProducts from "../../data/GetProducts.jsx";
 
+//dsfsdafasdfsadf
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
