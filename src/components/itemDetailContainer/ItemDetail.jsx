@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-import AddToCart from "../cart/AddToCart";
-import DecreaseItem from "../cart/DecreaseItem";
-import RemoveItems from "../cart/RemoveItems";
+import { CartContext } from "../Context/CartContext";
+import AddToCart from "../Cart/AddToCart";
+import DecreaseItem from "../Cart/DecreaseItem";
+import RemoveItems from "../Cart/RemoveItems";
 import { FaCirclePlus } from "react-icons/fa6";
 
 const ItemDetail = ({ product }) => {

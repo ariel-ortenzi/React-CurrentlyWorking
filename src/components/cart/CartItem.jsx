@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-import AddToCart from "../cart/AddToCart";
+import { CartContext } from "../Context/CartContext";
+import AddToCart from "./AddToCart";
 import DecreaseItem from "./DecreaseItem";
 import RemoveItems from "./RemoveItems";
 import { FaCirclePlus } from "react-icons/fa6";

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../Context/CartContext';
 import CartItem from './CartItem';
 import RemoveItems from './RemoveItems';
 
@@ -20,7 +20,7 @@ function CartList() {
             <div className="flex flex-col lg:flex-row w-full">
                 <div className="flex flex-wrap justify-start gap-4 p-2 w-full lg:w-2/3 ">
                     {cart.length === 0 ? (
-                        <div className="text-xl font-semibold w-full flex justify-center items-center">
+                        <div className="text-xl font-semibold w-full flex justify-center items-center mt-32">
                             <img src="./empty-cart.png" alt="empty-cart" />
                         </div>
                     ) : (
