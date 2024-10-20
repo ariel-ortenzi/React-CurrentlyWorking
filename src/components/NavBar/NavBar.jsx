@@ -3,9 +3,7 @@ import CartWidget from "../cart/CartWidget.jsx";
 import logo from "../../assets/logotype/logoOrpack.png";
 import SearchBar from "../serchBar/SearchBar.jsx";
 
-//sdfasdfasdfsda
-
-function NavBar() {
+export default function NavBar() {
     return (
         <header className="sticky top-0 bg-gray-500 border border-b-4 border-gray-500 border-b-blue-900 z-50">
             <nav className="flex flex-grow-1 p-4">
@@ -36,5 +34,3 @@ function NavBar() {
         </header>
     );
 }
-
-export default NavBar;

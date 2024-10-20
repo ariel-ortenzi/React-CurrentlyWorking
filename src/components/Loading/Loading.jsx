@@ -1,6 +1,6 @@
 import { PulseLoader } from "react-spinners";
 
-const Loading = () => {
+export const Loading = () => {
     return (
         <div className="flex justify-center items-center h-screen">
             <PulseLoader
@@ -11,7 +11,3 @@ const Loading = () => {
         </div>
     )
 }
-
-//sdfsdfsadfsdfds
-
-export default Loading
