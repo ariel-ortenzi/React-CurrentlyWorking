@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../Context/CartContext';
 import CartItem from './CartItem';
 import RemoveItems from './RemoveItems';
+import CheckOut from './CheckOut';
 
 function CartList() {
 
@@ -44,9 +45,7 @@ function CartList() {
                         <RemoveItems/>
                     </div>
                 </div>
-                    <div className="mt-6">
-                        <button className="bg-green-500 text-2xl text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 hover:scale-105 hover:shadow-xl transform transition-all duration-300 ease-out font-quickSand z-10 w-full">COMPRAR</button>
-                    </div>
+                    <CheckOut/>
                 </div>
             </div>
         </>
