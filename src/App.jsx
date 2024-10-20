@@ -1,12 +1,20 @@
-import './index.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from './components/NavBar/NavBar.jsx';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
-import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.jsx';
-import NotFound404 from './components/NotFound404/NotFound404.jsx';
-import { CartProvider } from "./components/Context/CartContext.jsx";
-import CartList from './components/Cart/CartList.jsx';
+// import './index.css';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import NavBar from './components/NavBar/NavBar.jsx';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+// import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.jsx';
+// import NotFound404 from './components/NotFound404/NotFound404.jsx';
+// import { CartProvider } from "./components/Context/CartContext.jsx";
+// import CartList from './components/Cart/CartList.jsx';
 
+import './index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import NotFound404 from './components/NotFound404/NotFound404'
+import CartList from './components/Cart/CartList'
+import { CartProvider } from './components/Context/CartContext'
 
 function App() {
 
