@@ -3,7 +3,7 @@ import { CartContext } from '../Context/CartContext';
 import CartItem from './CartItem';
 import RemoveItems from './RemoveItems';
 
-function CartList() {
+export function CartList() {
 
     const [cart, setCart] = useContext(CartContext);
     const quantity = cart.reduce((acc, curr) => {
@@ -52,5 +52,3 @@ function CartList() {
         </>
     );
 };
-
-export default CartList;
