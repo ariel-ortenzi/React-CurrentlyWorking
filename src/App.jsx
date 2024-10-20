@@ -1,12 +1,11 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import "../src/index.css"
-import NavBar from "./components/NavBar/NavBar"
-import ItemListContainer from "./components/itemListContainer/ItemListContainer"
-import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer"
-import CartList from "./components/cart/CartList"
-import NotFound404 from "./components/notFound404/NotFound404"
-import { CartProvider } from "./components/context/CartContext"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/itemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
+import CartList from "./components/cart/CartList";
+import NotFound404 from "./components/notFound404/NotFound404";
+import { CartProvider } from "./components/context/CartContext";
 
 
 function App() {
